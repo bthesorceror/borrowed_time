@@ -14,6 +14,7 @@ var tokenManager        = factory('namespace', 1);
 tokenManager.store('value', function(err, token) {
   tokenManager.fetch(token, function(err, value) {
     // value will equal 'value'
+    tokenManager.close();
   });
 });
 ```
