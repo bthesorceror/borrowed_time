@@ -59,14 +59,15 @@ test('Token Manager', function(t) {
   });
 
   t.test('tokens expire', function(t) {
-    t.plan(1);
+    t.plan(2);
 
     tokenManager.store('value', function(err, token) {
 
       setTimeout(function() {
 
         tokenManager.fetch(token, function(err, value) {
-          t.equal(value, null, 'retrieves correct value');
+          t.notOk(err, 'returns no error');
+          t.equal(value, null, 'get null value');
         });
 
       }, 2000);
