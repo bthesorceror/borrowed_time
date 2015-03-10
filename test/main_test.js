@@ -33,6 +33,31 @@ test('Token Manager', function(t) {
     });
   });
 
+  t.test('can fetch number', function(t) {
+    t.plan(1);
+
+    tokenManager.store(10.00, function(err, token) {
+      tokenManager.fetch(token, function(err, value) {
+        t.equal(value, 10.00, 'retrieves correct number');
+      });
+    });
+  });
+
+  t.test('can fetch object', function(t) {
+    t.plan(1);
+
+    var obj = {
+      name: 'test',
+      value: 'value'
+    };
+
+    tokenManager.store(obj, function(err, token) {
+      tokenManager.fetch(token, function(err, value) {
+        t.deepEqual(value, obj, 'retrieves correct object');
+      });
+    });
+  });
+
   t.test('tokens expire', function(t) {
     t.plan(1);
 
