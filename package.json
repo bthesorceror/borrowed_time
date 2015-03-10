@@ -1,0 +1,21 @@
+{
+  "name": "borrowed_time",
+  "version": "1.0.0",
+  "description": "Tokens livin on borrowed time.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*_test.js"
+  },
+  "keywords": [
+    "tokens",
+    "ttl"
+  ],
+  "author": "Brandon Farmer",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "redis": "^0.12.1",
+    "tape": "^3.5.0",
+    "uuid": "^2.0.1"
+  }
+}
