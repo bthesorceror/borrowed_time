@@ -1,5 +1,7 @@
 # Borrowed Time
 
+[![Build Status](https://travis-ci.org/bthesorceror/borrowed_time.svg)](https://travis-ci.org/bthesorceror/borrowed_time)
+
 Store values for a limited time with token access
 
 ## Example
