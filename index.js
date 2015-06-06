@@ -23,7 +23,7 @@ TokenManager.prototype.store = function(value, cb) {
 
   this.redis.setex(key, this.ttl, value, function(err) {
     cb(err, token);
-  }.bind(this));
+  });
 }
 
 TokenManager.prototype.fetch = function(token, cb) {
